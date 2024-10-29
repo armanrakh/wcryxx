@@ -7,7 +7,7 @@ function App() {
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
-          Edit is no longer needed tho! Edit <code>src/App.js</code> and save to reload.
+          How more time will this project need to work? Idk. Edit <code>src/App.js</code> and save to reload.
         </p>
         <a
           className="App-link"
