@@ -1,0 +1,109 @@
+@font-face {
+    font-family: Futura;
+    src: url('./fonts/Futura\ PT.ttf');
+}
+
+* {
+    font-family: Futura;
+    color: #596dff;
+}
+
+.main {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+}
+
+h1 {
+    margin: 0 auto;
+}
+
+.content {
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    width: 1200px;
+}
+
+.preview {
+    margin: 0 auto;
+    margin-top: 20px;
+    display: flex;
+    width: 1000px;
+    overflow-x: auto;
+    z-index: 16;
+    padding-bottom: 20px;
+    border-radius: 30px;
+}
+
+.preview::-webkit-scrollbar {
+    background-color: rgb(255, 255, 255);
+    border-radius: 30px;
+    height: 30px;
+}
+
+.preview::-webkit-scrollbar-thumb {
+    background: linear-gradient(90deg, #596dff, #1c32d1);
+    border-radius: 30px;
+}
+
+.fade {
+    position: absolute;
+    width: 1000px;
+    height: 320px;
+    border-radius: 30px;
+    background: linear-gradient(90deg, rgba(0, 0, 0, 0.1) 1%, transparent 10%, transparent 90%, rgba(0, 0, 0, 0.1) 99%);
+    z-index: 18;
+}
+
+.prev-el {
+    width: 250px;
+    height: 300px;
+    border-radius: 30px;
+    background: transparent;
+    margin-right: 20px;
+    backdrop-filter: blur(5px);
+
+    box-shadow: 15px 15px 2px rgba(0, 0, 0, 0.2);
+}
+
+.prev-el > h2 {
+    width: 300px;
+}
+
+.circl1 {
+    position: absolute;
+    border-radius: 25% 75% 82% 18% / 66% 58% 42% 34%;
+    background: none;
+    width: 400px;
+    height: 250px;
+    border: 1px solid #091ba1;
+}
+
+.circl2 {
+    position: absolute;
+    border-radius: 52% 48% 35% 65% / 66% 68% 32% 34%;
+    background: none;
+    width: 400px;
+    height: 250px;
+    border: 1px solid #1c32d1;
+}
+
+.circl3 {
+    position: absolute;
+    border-radius: 67% 33% 63% 37% / 40% 43% 57% 60% ;
+    background: none;
+    width: 400px;
+    height: 250px;
+    border: 1px solid #596dff;
+}
+
+@media screen and (max-width: 900px) {
+    .main {
+        width: 100%;
+    }
+    .content {
+        width: 700px;
+    }
+}
