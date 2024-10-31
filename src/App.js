@@ -15,12 +15,12 @@ function App() {
       <h1 className="lumititle">1234567890</h1>
       <Router basename='wcryxx'>
         <nav>
-          <Link to="/wcryxx">Home</Link>
-          <Link to="/wcryxx/about">About</Link>
+          <Link to="/">Home</Link>
+          <Link to="/about">About</Link>
         </nav>
         <Routes>
-          <Route exact path="/wcryxx" element={<Home/>} />
-          <Route path="/wcryxx/about" element={<About/>} />
+          <Route exact path="/" element={<Home/>} />
+          <Route path="/about" element={<About/>} />
         </Routes>
       </Router>
     </div>
