@@ -13,7 +13,7 @@ function App() {
   return (
     <div className="App">
       <h1 className="lumititle">1234567890</h1>
-      <Router>
+      <Router basename='wcryxx'>
         <nav>
           <Link to="/wcryxx">Home</Link>
           <Link to="/wcryxx/about">About</Link>
