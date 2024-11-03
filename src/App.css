@@ -1,11 +1,20 @@
 @font-face {
-  font-family: "Who Asks Satan";
+  font-family: "Who Asks Satan Pixel";
   src: url("./styles/fonts/WhoAsksSatanPixel-Regular.ttf");
+}
+
+@font-face {
+  font-family: "Who Asks Satan";
+  src: url("./styles/fonts/who\ asks\ satan.ttf");
 }
 
 .App {
   text-align: center;
-  background-color: rgb(0, 0, 0);
+  position: relative;
+  height: 1000px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .App-logo {
@@ -20,15 +29,12 @@
 }
 
 .App-header {
-  background-color: #282c34;
-  background-color: black;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
-  color: white;
 }
 
 .App-link {
@@ -36,10 +42,65 @@
 }
 
 .lumititle {
-  font-family: "Who Asks Satan";
-  color: white;
+  font-family: "Who Asks Satan Pixel";
   font-size: 80px;
   text-shadow: 0px 0px 20px white;
+  color: white;
+}
+
+.vidtest {
+  position: absolute;
+  z-index: -3;
+  top: -400px;
+  left: 0;
+  width: 100%;
+  filter: blur(5px) brightness(70%);
+}
+
+.bordertest {
+  width: 500px;
+  height: 200px;
+  align-self: center;
+  position: relative;
+}
+
+.bordertest::before {
+  content: '';
+  left: 0;
+  position: absolute;
+  width: 500px;
+  height: 200px;
+  background: repeating-conic-gradient(from var(--t), white 0%, white 10%, transparent 10%, transparent 80%, white 100%);
+  animation: borderspin 2s linear infinite;
+}
+
+.bordertest:hover + .bordertest::before {
+  background: red;
+}
+
+@property --t {
+  syntax: "<angle>";
+  inherits: false;
+  initial-value: 0deg;
+}
+
+@keyframes borderspin {
+  0% {
+    --t: 0deg;
+  }
+  100% {
+    --t: 360deg;
+  }
+}
+
+.bordertest::after {
+  content: '';
+  left: 0;
+  position: absolute;
+  width: 470px;
+  height: 170px;
+  margin: 15px 15px 0px 15px;
+  background-color: rgb(39, 39, 39);
 }
 
 @keyframes App-logo-spin {
